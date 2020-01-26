@@ -4,7 +4,23 @@
 
 ?>
 <!-- set up session  -->
-
+<?php
+  if(!isset($_SESSION['id'])){
+    echo "<script>
+        window.open('login.php', '_self', 1);
+    </script>";
+  }// điều hướng về login.php khi chưa đăng nhập 
+  
+  if(isset($_POST['logout'])){
+    unset($_SESSION['id']);
+    unset($_SESSION['username']);
+    unset($_SESSION['password']);
+    echo "<script>
+        alert('Thoát thành công');
+        window.open('login.php', '_self', 1);
+    </script>";
+  }
+?> <!--xử lí phần thoát đăng nhập--> 
 
 
 <!doctype html>
@@ -36,10 +52,12 @@
                Welcome to Helpdesk System
             </div>
             <div class="header-user" data-aos="fade-left" data-aos-duration="2000">
-              <div class="header-user-notify">Chào ?php  ?></div>
-              <button class="button-log-out">
+              <div class="header-user-notify">Chào <span class="name"><?=$_SESSION['username']?></span></div>
+              <form action="" method="POST">
+              <button type="submit" name="logout" class="button-log-out">
                <i class="fa fa-share-square" aria-hidden="true"></i>
               </button>
+              </form>
             </div>
           </header>
          <!-- End phần header   -->

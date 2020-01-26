@@ -15,12 +15,20 @@
 			$_SESSION['username'] = $row['TK_USENAME'];
 			$_SESSION['phanquyen'] = $row['TK_LOAI'];
 			
-				echo "<script>
+				echo "<script language='javascript'>
 							alert('Chào bạn đã đăng nhập vào hệ thống ');
 							window.open('index.php', '_self' , 1);
 					</script>";
 			
-		}
+		}else{
+			echo "
+							<script language='javascript'>
+								alert('Tài khoản không tồn tại');
+								
+							</script>
+						";
+		}	
+
 	}
 
 

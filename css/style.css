@@ -1,6 +1,7 @@
 /* font  */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 /* reset css   */
 *{
     padding: 0;
@@ -90,8 +91,16 @@ ul li{ list-style: none;}
     justify-content: center;
     align-items: center;
 }
+
 .header .header-user .header-user-notify{
     margin-right: 10px;
+}
+.header-user-notify .name{
+    font-weight: 900;
+    color: #292826;
+    text-transform: uppercase;
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
 }
 .header .header-user .button-log-out{
     border: none;
@@ -156,10 +165,20 @@ ul li{ list-style: none;}
     min-height: 120vh;
     
 }
-::-webkit-scrollbar { 
-    display: none; 
-}
-
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    display:block;
+  }
+  ::-moz-scrollbar {
+    width: 10px;
+  }
+  ::-moz-scrollbar-thumb:hover {
+    background: #555; 
+    display:block;
+  }
 .menu-lateral a{
     display: flex;
     align-items: center;
