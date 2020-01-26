@@ -1,0 +1,217 @@
+/* font  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro&display=swap');
+/* reset css   */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+a{ text-decoration: none; color: #000;}
+a:hover{ text-decoration: none;}
+ul li{ list-style: none;}
+
+/* main css   */
+/* body{
+    height: 1000px;
+} */
+
+
+
+
+/* header   css  */
+.wrapper{
+    height: 1500px;
+    position: relative;
+}
+
+.header{
+    
+    background: #fff;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo conten user";
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    width: 100%;
+    z-index: 1000;
+    
+    
+}
+.header .header-logo{
+    grid-area: logo;
+}
+.header .header-content{
+    grid-area: conten;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 24px;
+    letter-spacing: 2.5px;
+    font-weight: 900;
+}
+.header .header-user{
+    grid-area: user;
+}
+.header .header-logo .button-menu{
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+}
+.header .header-logo .button-menu:hover{
+    background: #E7E7E7;
+    
+}
+.header .header-logo .button-menu i{
+    font-size: 32px;
+}
+.header .header-logo img{
+    width: 100px;
+    height: 60px;
+}
+.header-logo{
+    display: flex;
+    
+    align-items: center;
+    height: 100%;
+}
+.header .header-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .header-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .header-user .header-user-notify{
+    margin-right: 10px;
+}
+.header .header-user .button-log-out{
+    border: none;
+    outline: none;
+    background: white;
+}
+.header .header-user .button-log-out i{
+    font-size: 32px;
+}
+.button-log-out i{
+    color: #3d1e6d;
+}
+/* end css header */ 
+
+/* start meenu lateral  */
+
+
+.main{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-areas: "nav-left content";
+    width: 100%;
+}
+.main.active{
+    grid-template-columns: 100px auto;
+}
+.main.active .full-nav{
+    width: 100px;
+}
+.main.active span{
+    display: none;
+}
+.full-nav{
+    grid-area: nav-left;
+    width: 300px;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    min-height: 100vh;
+    overflow: auto;
+
+    
+    z-index: 99999;
+    
+    
+   
+    
+    
+
+
+}
+
+.menu-lateral{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 120vh;
+    
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.menu-lateral a{
+    display: flex;
+    align-items: center;
+    padding: 12px 30px;
+    position: relative;
+    color: #49657b
+}
+.menu-lateral a:hover{
+    background: #e5e5e5;
+}
+.menu-lateral i{
+    font-size: 30px;
+    color: #606060;
+
+}
+
+.menu-lateral a span{
+    margin-left: 28px;
+    color: #49657b;
+}
+.menu-lateral a.active{
+    background:  #e5e5e5;
+}
+.menu-lateral a.active i{
+    color: #3d1e6d;
+}
+.menu-lateral a.active:before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color:#49657b;
+}
+/* .menu-lateral a.active i{
+    animation: roate 1s infinite;
+}
+@-webkit-keyframes roate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+} */
+.content{
+    position: absolute;
+    top: 0;
+    grid-area: content;
+    background:  #f7f7f7;
+    width: 100%;
+    height: 1500px;
+   
+}
