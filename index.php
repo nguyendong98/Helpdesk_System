@@ -48,8 +48,8 @@
               <button class="button-menu" id="button-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
               <img src="img/logo.png" alt="">
             </div>
-            <div class="header-content" data-aos="zoom-in">
-               Welcome to Helpdesk System
+            <div class="header-content" >
+               <p class="line anim-typewriter">Welcome to Helpdesk System<span>.</span></p>
             </div>
             <div class="header-user" data-aos="fade-left" data-aos-duration="2000">
               <div class="header-user-notify">Chào <span class="name"><?=$_SESSION['username']?></span></div>
