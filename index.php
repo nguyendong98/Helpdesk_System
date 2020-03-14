@@ -85,8 +85,8 @@
                    </nav>
                    
                </div>
-               <div class="content">
-                  ?php include "file.php"   ;             ?>
+               <div class="content" style="background:#FFF">
+                  <?php include "BaoCaoSuCo.php";?>
    
                </div>
            
