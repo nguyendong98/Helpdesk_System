@@ -258,6 +258,6 @@
             <p>Đại Học Cần Thơ</p>
         </div>
 	</div>
-	<script src="js/main.js"></script>
+	
 </body>
 </html>
