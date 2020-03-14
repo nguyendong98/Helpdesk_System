@@ -8,12 +8,12 @@
 	if(isset($_POST['login'])){
 		$username = $_POST["Email"];
 		$password = $_POST["Password"];
-		$query = mysqli_query($conn,"SELECT * FROM taikhoan WHERE TK_USENAME = '$username' AND TK_PASSWORD = '$password' ");
+		$query = mysqli_query($conn,"SELECT * FROM taikhoan WHERE TK_USERNAME = '$username' AND TK_PASSWORD = '$password' ");
 		if(mysqli_num_rows($query) == 1){
 			$row = mysqli_fetch_assoc($query);
 			$_SESSION['id'] = $row['TK_ID'];
-			$_SESSION['username'] = $row['TK_USENAME'];
-			$_SESSION['phanquyen'] = $row['TK_LOAI'];
+			$_SESSION['username'] = $row['TK_USERNAME'];
+			$_SESSION['role'] = $row['TK_ROLE'];
 			
 				echo "<script language='javascript'>
 							alert('Chào bạn đã đăng nhập vào hệ thống ');

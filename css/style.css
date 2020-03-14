@@ -203,19 +203,27 @@ ul li{ list-style: none;}
     min-height: 120vh;
     
 }
+.menu-lateral li{
+    list-style: none;
+}
+/* width */
 ::-webkit-scrollbar {
     width: 10px;
   }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
-    display:block;
-  }
-  ::-moz-scrollbar {
-    width: 10px;
-  }
-  ::-moz-scrollbar-thumb:hover {
-    background: #555; 
-    display:block;
   }
 .menu-lateral a{
     display: flex;

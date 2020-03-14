@@ -1,15 +1,16 @@
 document.addEventListener("DOMContentLoaded",function(){
     // click vào các ô trên thanh menu trái
     var nut1 = document.querySelectorAll("nav.menu-lateral a")
-    var nut3= document.querySelectorAll("nav.menu-lateral a i")
+    
     for(var i = 0; i< nut1.length; i++){
-        nut1[i].addEventListener("click",function() {
+        nut1[i].addEventListener("click",function(e) {
+            // e.preventDefault()
             for(var i =0; i < nut1.length; i++){
                 nut1[i].classList.remove("active");
-                nut3[i].classList.remove("fa-spin")
+                
             }
             this.classList.add("active")
-            this.firstChild.classList.add("fa-spin")
+            
             
         })
     }

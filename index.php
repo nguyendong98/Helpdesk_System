@@ -65,28 +65,28 @@
            
                <div class="full-nav">
                    <nav class="menu-lateral">
-                     <a class ="func active" href="#"><i class="fa fa-home fa-spin" aria-hidden="true"></i>
+                     <a class ="func " href="index.php?content=home"><i class="fa fa-home " ></i>
                       <span>Trang chủ</span> </a>
                      <hr>
-                     <a class="func" href="#"><i class="fa fa-exclamation-triangle " aria-hidden="true"></i> <span>Báo lỗi<span></span></a>
-                     <a class="func" href="#"><i class="fa fa-search " aria-hidden="true"></i>
+                     <a class="func" href="index.php?content=baocaosuco"><i class="fa fa-exclamation-triangle " ></i> <span>Báo lỗi</span></a>
+                     <a class="func" href="index.php?content=tracuuloi"><i class="fa fa-search " ></i></<a>
 
                       <span>Tra cứu lỗi</span></a>
                      <hr>
-                     <a class="func" href="#"><i class="fa fa-book" aria-hidden="true"></i><span>Thông tin phần cứng</span></a>
+                     <a class="func" href="#"><i class="fa fa-book" ></i><span>Thông tin phần cứng</span></a>
                      <hr>
-                     <a class="func" href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i><span> Sự cố mới</span></a>
-                     <a class="func" href="#"><i class="fa fa-hand-o-right" aria-hidden="true"></i> <span>Phân công</span></a>
-                     <a class="func" href="#"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><span> Kết quả</span></a>
+                     <a class="func" href="#"><i class="fa fa-newspaper-o" ></i><span> Sự cố mới</span></a>
+                     <a class="func" href="#"><i class="fa fa-hand-o-right" ></i> <span>Phân công</span></a>
+                     <a class="func" href="#"><i class="fa fa-calendar-check-o" ></i><span> Kết quả</span></a>
                      <hr>
-                     <a class="func" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i> <span>Danh sách FAQ</span></a>
-                     <a class="func" href="#"><i class="fa fa-plus-square" aria-hidden="true"></i><span> Thêm mới FAQ</span></a>
-                     <a class="func" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> <span>Cập nhật FAQ</span></a>
+                     <a class="func" href="#"><i class="fa fa-list-alt" ></i> <span>Danh sách FAQ</span></a>
+                     <a class="func" href="#"><i class="fa fa-plus-square" ></i><span> Thêm mới FAQ</span></a>
+                     <a class="func" href="#"><i class="fa fa-wrench" ></i> <span>Cập nhật FAQ</span></a>
                    </nav>
                    
                </div>
                <div class="content" style="background:#FFF">
-                  <?php include "BaoCaoSuCo.php";?>
+                  <?php include "content.php"; ?>
    
                </div>
            

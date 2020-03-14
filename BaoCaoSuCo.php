@@ -1,11 +1,43 @@
+<?php
+	// session_start();
+	include './process/process.php';
+?>
+
+<!-- //Xử lí thêm sự cố -->
+<?php
+	if(isset($_POST['btnDongY'])){
+		$SC_IDNVTHONGBAO = $_POST['slTenNhanVien_ThongBao'];
+		$SC_IDNVGAPSUCO = $_POST['slTenNhanVien_GapSuCo'];
+		$SC_THOIDIEMGAP = $_POST['txtThoiDiem'];
+		$SC_DIADIEM = $_POST['txtDiaDiem'];
+		$SC_IDPHANCUNG = $_POST['phancung'];
+		$SC_MOTACHITIET = $_POST['txtChiTiet'];
+		$hinhanh=$_FILES['hinhanh']['name'];
+		$hinhanhtmpname=$_FILES['hinhanh']['tmp_name'];
+		$folder='./upload/';
+		move_uploaded_file($hinhanhtmpname, $folder.$hinhanh);
+		$sql = mysqli_query($conn, "INSERT INTO suco(SC_IDNVTHONGBAO, SC_IDNVGAPSUCO, SC_THOIDIEMGAP, 
+		SC_DIADIEM, SC_IDPHANCUNG, SC_MOTACHITIET, SC_ANHMANHINH, SC_IDTRANGTHAI) 
+		VALUES('$SC_IDNVTHONGBAO', '$SC_IDNVGAPSUCO', '$SC_THOIDIEMGAP', '$SC_DIADIEM',
+		'$SC_IDPHANCUNG', '$SC_MOTACHITIET', '$hinhanh', 'Chưa xủ lí')");
+		if($sql){
+			echo "<script>
+                 alert('Thêm thành công');   
+            </script>";
+		}
+	}
+
+
+
+?>
 <!DOCTYPE html>
-<?php ?>
+
 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Báo cáo sự cố</title>
-
+<link rel="stylesheet" href="css/style.css">
 <style>
 
 	#Header h2{
@@ -94,6 +126,8 @@
                     	<td>
                         	<table id="tbNVThongBao">
                     			<tr>
+									
+
                         			<th colspan="2">Nhân viên thông báo</th>
                         		</tr>
                         
@@ -101,7 +135,16 @@
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
                             			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao">
-                            				<option value="1">Nguyễn Văn A</option>
+											<?php
+												if(isset($_SESSION['id'])){
+													$id = $_SESSION['id'];
+													// print_r($id);
+													$sql=mysqli_query($conn, "SELECT * FROM nhanvien WHERE NV_IDTAIKHOAN='$id'");
+													$result=mysqli_fetch_array($sql);
+												
+											?>
+											<option value="<?=$result['NV_ID']?>"><?=$result['NV_HOTEN']?></option>
+											<?php } ?>
                             			</select>
                             		</td>
                         		</tr>
@@ -109,8 +152,26 @@
                         		<tr>
                         			<th colspan="2">Nội dung sự cố</th>
                         		</tr>
-                        
+								<tr>
+									<td>
+										Phần cứng
+									</td>
+									<td class="rightTable">
+										<select id="phancung" name="phancung">
+												<?php
+													if(isset($_SESSION['id'])){														
+														// print_r($id);
+														$sql=mysqli_query($conn, "SELECT * FROM phancung" );
+														while($result= mysqli_fetch_array($sql)){
+														
+												?>
+												<option value="<?=$result['PC_ID']?>"><?=$result['PC_TEN']?></option>
+												<?php }} ?>
+										</select>
+                            		</td>
+								</tr>					
                         		<tr>
+
                         			<td> 
                             			Thời điểm gặp sự cố</td>
                             		<td class="rightTable">
@@ -144,7 +205,15 @@
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
                             			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo">
-                            				<option value="1">Nguyễn Văn A</option>
+											<?php
+												if(isset($_SESSION['id'])){													
+													// print_r($id);
+													$sql=mysqli_query($conn, "SELECT * FROM nhanvien" );
+													while($result= mysqli_fetch_array($sql)){
+													
+											?>
+											<option value="<?=$result['NV_ID']?>"><?=$result['NV_HOTEN']?></option>
+											<?php }} ?>
                             			</select>
                             		</td>
                         		</tr>
@@ -157,7 +226,7 @@
                         			<td>
                             			Đường dẫn</td>
                             		<td class="rightTable">
-                                		<input type="file" id="txtDuongDan" name="txtDuongDan"/>
+                                		<input type="file" id="txtDuongDan" name="hinhanh"/>
                             		</td>
                         		</tr>
                         
@@ -188,6 +257,7 @@
         	<hr />
             <p>Đại Học Cần Thơ</p>
         </div>
-    </div>
+	</div>
+	<script src="js/main.js"></script>
 </body>
 </html>
