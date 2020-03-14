@@ -100,7 +100,7 @@
                         		<tr>
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
-                            			<select id="slTenNhanVien_ThongBao">
+                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao">
                             				<option value="1">Nguyễn Văn A</option>
                             			</select>
                             		</td>
@@ -143,7 +143,7 @@
                         		<tr>
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
-                            			<select id="slTenNhanVien_ThongBao">
+                            			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo">
                             				<option value="1">Nguyễn Văn A</option>
                             			</select>
                             		</td>
