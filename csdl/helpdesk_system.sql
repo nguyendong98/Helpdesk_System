@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 14, 2020 at 05:33 PM
+-- Generation Time: Apr 19, 2020 at 06:28 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -88,7 +88,7 @@ CREATE TABLE `suco` (
   `SC_IDPHANCUNG` int(11) NOT NULL,
   `SC_MOTACHITIET` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `SC_ANHMANHINH` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `SC_IDTRANGTHAI` int(11) NOT NULL
+  `SC_IDTRANGTHAI` varchar(50) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -96,7 +96,8 @@ CREATE TABLE `suco` (
 --
 
 INSERT INTO `suco` (`SC_ID`, `SC_IDNVTHONGBAO`, `SC_IDNVGAPSUCO`, `SC_THOIDIEMGAP`, `SC_THOIDIEMGHINHAN`, `SC_DIADIEM`, `SC_IDPHANCUNG`, `SC_MOTACHITIET`, `SC_ANHMANHINH`, `SC_IDTRANGTHAI`) VALUES
-(2, 1, 3, '2020-03-02', '2020-03-14 16:29:09', '2020-03-02', 1, 'Hỏng nặng', '2.jpg', 0);
+(4, 1, 3, '2020-03-01', '2020-03-14 16:58:01', 'Cần Thơ', 2, 'Hư hỏng nặng', 'RAM.jpg', 'Chưa xử lí'),
+(8, 1, 1, '2020-04-19', '2020-04-19 16:23:04', 'Bến Tre', 1, 'Hư hỏng nhẹ', 'cpu.jpg', 'Chưa xủ lí');
 
 -- --------------------------------------------------------
 
@@ -170,7 +171,7 @@ ALTER TABLE `phancung`
 -- AUTO_INCREMENT for table `suco`
 --
 ALTER TABLE `suco`
-  MODIFY `SC_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `SC_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `taikhoan`
