@@ -10,6 +10,13 @@
             case "home":
                 include ("Home.php");    
                 break;
+			case "danhsachsuco":
+				include ("DanhSachSuCo.php");
+				break;
+			case "phancongsuco":
+				
+				include ("PhanCongSuCo.php");
+				break;
               
         }
     }else{

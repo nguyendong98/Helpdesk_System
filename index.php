@@ -37,6 +37,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
      
@@ -76,7 +80,7 @@
                      <a class="func" href="#"><i class="fa fa-book" ></i><span>Thông tin phần cứng</span></a>
                      <hr>
                      <a class="func" href="#"><i class="fa fa-newspaper-o" ></i><span> Sự cố mới</span></a>
-                     <a class="func" href="#"><i class="fa fa-hand-o-right" ></i> <span>Phân công</span></a>
+                     <a class="func" href="index.php?content=danhsachsuco"><i class="fa fa-hand-o-right" ></i> <span>Phân công</span></a>
                      <a class="func" href="#"><i class="fa fa-calendar-check-o" ></i><span> Kết quả</span></a>
                      <hr>
                      <a class="func" href="#"><i class="fa fa-list-alt" ></i> <span>Danh sách FAQ</span></a>
@@ -86,7 +90,7 @@
                    
                </div>
                <div class="content" style="background:#FFF">
-                  <?php include "content.php"; ?>
+                  <?php require_once "content.php"; ?>
    
                </div>
            
