@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2020 at 07:58 AM
+-- Generation Time: Apr 20, 2020 at 08:06 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -161,7 +161,9 @@ ALTER TABLE `nhanvien`
 -- Indexes for table `nhiemvuphancong`
 --
 ALTER TABLE `nhiemvuphancong`
-  ADD PRIMARY KEY (`NVPC_ID`);
+  ADD PRIMARY KEY (`NVPC_ID`),
+  ADD KEY `NVPC_IDNHANVIEN` (`NVPC_IDNHANVIEN`),
+  ADD KEY `NVPC_IDSUCO` (`NVPC_IDSUCO`);
 
 --
 -- Indexes for table `phancung`
@@ -214,6 +216,17 @@ ALTER TABLE `suco`
 --
 ALTER TABLE `taikhoan`
   MODIFY `TK_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `nhiemvuphancong`
+--
+ALTER TABLE `nhiemvuphancong`
+  ADD CONSTRAINT `nhiemvuphancong_ibfk_1` FOREIGN KEY (`NVPC_IDNHANVIEN`) REFERENCES `nhanvien` (`NV_ID`),
+  ADD CONSTRAINT `nhiemvuphancong_ibfk_2` FOREIGN KEY (`NVPC_IDSUCO`) REFERENCES `suco` (`SC_ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
