@@ -3,8 +3,8 @@
 		if(isset($_POST['submit'])){
 			$id_sc = $_GET['SC_ID'];
 			$id_nv = $_POST['nv_id'];
-			print_r($id_nv);
-			print_r($id_sc);
+			// print_r($id_nv);
+			// print_r($id_sc);
 			$sql = mysqli_query($conn, "INSERT INTO nhiemvuphancong(NVPC_IDSUCO, NVPC_IDNHANVIEN) 
 			VALUES ('$id_sc', '$id_nv')");
 			if($sql){
