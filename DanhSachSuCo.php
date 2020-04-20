@@ -58,7 +58,7 @@
             </thead>
             <tbody>
               <?php
-                $sql = mysqli_query($conn, "select nhanvien.NV_HOTEN, suco.SC_THOIDIEMGAP, suco.SC_THOIDIEMGHINHAN, 
+                $sql = mysqli_query($conn, "select nhanvien.NV_HOTEN,suco.SC_ID, suco.SC_THOIDIEMGAP, suco.SC_THOIDIEMGHINHAN, 
                 suco.SC_MOTACHITIET, suco.SC_ANHMANHINH, suco.SC_IDTRANGTHAI, suco.SC_DIADIEM, phancung.PC_TEN 
                 FROM nhanvien, suco, phancung 
                 WHERE nhanvien.NV_ID = suco.SC_IDNVGAPSUCO AND suco.SC_IDPHANCUNG=phancung.PC_ID AND suco.SC_IDTRANGTHAI='Chưa xử lí' ");
@@ -78,7 +78,7 @@
                 <td><?=$row['SC_IDTRANGTHAI']?></td>
 
                 <td style="width: 10%">
-                  <a style="font-size: 20px" href="index.php?content=phancongsuco&SC_ID=1">
+                  <a style="font-size: 20px" href="index.php?content=phancongsuco&SC_ID=<?=$row['SC_ID']?>">
                     <i class="fa fa-pencil-square-o text-success text-active"></i>
                   </a>
                 </td>
