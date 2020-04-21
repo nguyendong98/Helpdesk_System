@@ -77,7 +77,7 @@
 
                       <span>Tra cứu lỗi</span></a>
                      <hr>
-                     <a class="func" href="#"><i class="fa fa-book" ></i><span>Thông tin phần cứng</span></a>
+                     <a class="func" href="index.php?content=thongtinphancung"><i class="fa fa-book" ></i><span>Thông tin phần cứng</span></a>
                      <hr>
                      <a class="func" href="#"><i class="fa fa-newspaper-o" ></i><span> Sự cố mới</span></a>
                      <a class="func" href="index.php?content=danhsachsuco"><i class="fa fa-hand-o-right" ></i> <span>Phân công</span></a>

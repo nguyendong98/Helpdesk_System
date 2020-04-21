@@ -17,7 +17,9 @@
 				
 				include ("PhanCongSuCo.php");
 				break;
-              
+            case "thongtinphancung":
+				include ("thongtinphancung.php");
+				break;
         }
     }else{
 		include 'Home.php';

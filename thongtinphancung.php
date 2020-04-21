@@ -1,0 +1,247 @@
+<?php
+	// session_start();
+	include './process/process.php';
+?>
+
+<!-- //Xử lí hiển thị chi tiết sự cố -->
+<?php
+	
+	
+
+?>
+
+
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Báo cáo sự cố</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+
+	#Header h3{
+		font-size: 2rem;
+		font-weight: bold;
+		margin-left: 1rem;
+		text-shadow: 1px 1px 2px gray;
+	}
+	
+	#Content{
+		margin: 1rem 1rem;
+		height: 500px;
+		background: #EEF9F0;
+		box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.75);
+		
+	}
+	
+	#Content #tbThongBaoSuCo{
+		/* border-top: 1px solid #666;
+		border-bottom: 1px solid #666;
+		border-left: 0px;
+		border-right: 1px solid #666; */
+		margin:auto;
+		width: 1000px;
+		height: 450px;
+		text-align: right;
+		
+	}
+	
+	#Content #tbThongBaoSuCo td{
+		text-align:right;
+		border-spacing: 30px;
+		
+	}
+	
+	#Content #tbNVThongBao{
+		float: left;
+		height: 330px;
+		width: 500px;
+	}
+	
+	#Content #tbNVThongBao th{	
+		text-align:left;	
+		
+	}
+	
+	#Content #tbNVThongBao td{
+		text-align: center;	
+	}
+	
+	#Content #tbNVGapSuCo{
+		float:left;
+		height: 330px;
+		width:500px;
+	}
+	
+	#Content #tbNVGapSuCo th{	
+		text-align:left;	
+	}
+	
+	#Content #tbNVGapSuCo td{
+		text-align: center;	
+	}
+	
+	.rightTable input, select, textarea{
+		width: 370px;
+		border-radius: px;
+		box-shadow: 4px 6px 14px -8px rgba(0,0,0,0.75);
+		color: gray;
+	}
+	
+	#Footer p{
+		text-align:center;
+	}
+
+	.Button{
+		background: #0776BE;
+		height: 30px;
+		width: 100px;	
+		font-weight:bold;
+		color:#FFF;	
+	}
+
+</style>
+
+</head>
+
+<body>
+	<div id="Container">
+    	<div id="Header">
+        	<h3>THÔNG TIN PHẦN CỨNG</h3>
+            <hr />
+        </div>
+        
+        <div id="Content">
+        	<form id="frmBaoSuCo" name="frmBaoSuCo" method="post" action="" enctype="multipart/form-data">
+            	<table id="tbThongBaoSuCo">
+                	<tr>
+                    	<td>
+                        	<table id="tbNVThongBao">
+                    			<tr>
+                        			<th colspan="2" class="title">Tìm kiếm thông tin phần cứng</th>
+                        		</tr>
+                        
+                        		<tr>
+                        			<td>Tên nhân viên</td>
+                            		<td class="rightTable">
+                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" >
+											<?php
+												if(isset($_SESSION['id'])){
+													$id = $_SESSION['id'];
+													// print_r($id);
+													$sql=mysqli_query($conn, "SELECT * FROM nhanvien WHERE NV_IDTAIKHOAN='$id'");
+													$result=mysqli_fetch_array($sql);
+												
+											?>
+											<option value="<?=$result['NV_ID']?>"><?=$result['NV_HOTEN']?></option>
+											<?php } ?>
+                            			</select>
+                            		</td>
+                        		</tr>
+								<tr>
+                        			<td>Danh sách phần cứng</td>
+                            		<td class="rightTable">
+                            			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo">
+											<?php
+												if(isset($_SESSION['id'])){													
+													// print_r($id);
+													$sql=mysqli_query($conn, "SELECT * FROM phancung" );
+													while($result= mysqli_fetch_array($sql)){
+													
+											?>
+											<option value="<?=$result['PC_ID']?>"><?=$result['PC_TEN']?></option>
+											<?php }} ?>
+                            			</select>
+                            		</td>
+                        		</tr>
+                        
+						<td style="text-align: right">
+                            <input class="btn btn-success" type="submit" id="btnDongY" name="btnDongY" value="Tìm kiếm"/>
+                            </td>
+								
+								
+								
+								
+                        		<tr>
+                        			<th colspan="2" class="title">Thông tin chi tiết</th>
+                        		</tr>
+								<tr>
+							
+
+									 <table width="100%" border="1">
+								  <tr>
+									 <td>STT</td>
+									<td>Mã số PC</td>
+									<td>Tên phần cứng</td>
+									<td>Ngày mua</td>
+									<td>Chủng loại</td>
+									<td>Mô tả chi tiết</td>
+									
+								  </tr>
+									
+						
+								<?php
+								if(isset($_POST['btnDongY'])){
+										$SC_IDNVGAPSUCO = $_POST['slTenNhanVien_GapSuCo'];
+												if(isset($_SESSION['id'])){													
+													// print_r($id);
+													$sql=mysqli_query($conn, "SELECT * from phancung, suco where PC_ID=SC_IDPHANCUNG and PC_IDNHANVIEN='$id' and PC_ID='$SC_IDNVGAPSUCO'" );
+													$i=1;
+													while($dong= mysqli_fetch_array($sql)){
+													
+															?>
+
+								 <tr>
+									
+									<td><?php  echo $i;?></td>
+									<td><?php echo $dong['PC_ID'] ?></td>
+									<td><?php echo $dong['PC_TEN'] ?></td>
+									<td><?php echo $dong['PC_NGAYMUA'] ?></td>
+									<td><?php echo $dong['PC_IDLOAIPHANCUNG'] ?></td>
+									<td><?php echo $dong['SC_MOTACHITIET'] ?></td>
+									
+											   
+									</tr>
+						  
+														  <?php
+								 $i++;
+								}}} ?>
+														  
+						  
+						  
+						  
+						  
+	   
+
+    
+
+</table>
+						  
+						  
+						  
+						  
+						  
+						  
+						  
+                 			</table>
+                        </td>
+                        
+
+                        
+                       
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+        <div id="Footer" >
+        	<hr />
+            <p class="text-secondary">Đại Học Cần Thơ</p>
+        </div>
+	</div>
+	
+</body>
+</html>
