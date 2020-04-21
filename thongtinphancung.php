@@ -128,16 +128,23 @@
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
                             			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" >
+											
+											
+											
+											
 											<?php
-												if(isset($_SESSION['id'])){
-													$id = $_SESSION['id'];
+												if(isset($_SESSION['id'])){													
 													// print_r($id);
-													$sql=mysqli_query($conn, "SELECT * FROM nhanvien WHERE NV_IDTAIKHOAN='$id'");
-													$result=mysqli_fetch_array($sql);
-												
+													$sql=mysqli_query($conn, "SELECT * FROM nhanvien" );
+													while($result= mysqli_fetch_array($sql)){
+													
 											?>
 											<option value="<?=$result['NV_ID']?>"><?=$result['NV_HOTEN']?></option>
-											<?php } ?>
+											<?php }} ?>
+											
+											
+											
+											
                             			</select>
                             		</td>
                         		</tr>
@@ -174,6 +181,7 @@
 									 <table width="100%" border="1">
 								  <tr>
 									 <td>STT</td>
+									 <td>Tên nhân viên</td>
 									<td>Mã số PC</td>
 									<td>Tên phần cứng</td>
 									<td>Ngày mua</td>
@@ -186,9 +194,10 @@
 								<?php
 								if(isset($_POST['btnDongY'])){
 										$SC_IDNVGAPSUCO = $_POST['slTenNhanVien_GapSuCo'];
+										$SC_IDNVTHONGBAO = $_POST['slTenNhanVien_ThongBao'];
 												if(isset($_SESSION['id'])){													
 													// print_r($id);
-													$sql=mysqli_query($conn, "SELECT * from phancung, suco where PC_ID=SC_IDPHANCUNG and PC_IDNHANVIEN='$id' and PC_ID='$SC_IDNVGAPSUCO'" );
+													$sql=mysqli_query($conn, "SELECT * from phancung, suco, nhanvien where PC_ID=SC_IDPHANCUNG and PC_IDNHANVIEN='$SC_IDNVTHONGBAO' and PC_ID='$SC_IDNVGAPSUCO' and PC_IDNHANVIEN=NV_ID" );
 													$i=1;
 													while($dong= mysqli_fetch_array($sql)){
 													
@@ -197,6 +206,7 @@
 								 <tr>
 									
 									<td><?php  echo $i;?></td>
+									<td><?php echo $dong['NV_HOTEN'] ?></td>
 									<td><?php echo $dong['PC_ID'] ?></td>
 									<td><?php echo $dong['PC_TEN'] ?></td>
 									<td><?php echo $dong['PC_NGAYMUA'] ?></td>
