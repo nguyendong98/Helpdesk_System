@@ -63,8 +63,9 @@
                 FROM nhanvien, suco, phancung 
                 WHERE nhanvien.NV_ID = suco.SC_IDNVGAPSUCO AND suco.SC_IDPHANCUNG=phancung.PC_ID AND suco.SC_IDTRANGTHAI='Chưa xử lí' ");
                 if(mysqli_num_rows($sql) > 0){
+                  $i  = 1;
                   while($row = mysqli_fetch_assoc($sql)){
-                    $i  = 1;
+                    
               ?>
               <tr>
                 <td><?=$i?></td>  
@@ -83,7 +84,7 @@
                   </a>
                 </td>
               </tr>
-                  <?php } } ?>      
+                  <?php $i++; }  } ?>      
 
             </tbody>
           </table>
