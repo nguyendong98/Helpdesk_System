@@ -40,29 +40,37 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 
-	#Header h2{
-		text-align:center;	
+	#Header h3{
+		font-size: 2rem;
+		font-weight: bold;
+		margin-left: 1rem;
+		text-shadow: 1px 1px 2px gray;
 	}
 	
 	#Content{
-		margin:auto;
+		margin: 1rem 1rem;
 		height: 500px;
+		background: #EEF9F0;
+		box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.75);
+		
 	}
 	
 	#Content #tbThongBaoSuCo{
-		border-top: 1px solid #666;
+		/* border-top: 1px solid #666;
 		border-bottom: 1px solid #666;
 		border-left: 0px;
-		border-right: 1px solid #666;
+		border-right: 1px solid #666; */
 		margin:auto;
 		width: 1000px;
 		height: 450px;
-		text-align:center;
+		text-align: right;
+		
 	}
 	
 	#Content #tbThongBaoSuCo td{
-		text-align:center;
+		text-align:right;
 		border-spacing: 30px;
+		
 	}
 	
 	#Content #tbNVThongBao{
@@ -73,6 +81,7 @@
 	
 	#Content #tbNVThongBao th{	
 		text-align:left;	
+		
 	}
 	
 	#Content #tbNVThongBao td{
@@ -95,6 +104,9 @@
 	
 	.rightTable input, select, textarea{
 		width: 180px;
+		border-radius: px;
+		box-shadow: 4px 6px 14px -8px rgba(0,0,0,0.75);
+		color: gray;
 	}
 	
 	#Footer p{
@@ -108,6 +120,7 @@
 		font-weight:bold;
 		color:#FFF;	
 	}
+
 </style>
 
 </head>
@@ -115,7 +128,7 @@
 <body>
 	<div id="Container">
     	<div id="Header">
-        	<h2>Cung Cấp Thông Tin Sự Cố</h2>
+        	<h3>CUNG CẤP THÔNG TIN SỰ CỐ</h3>
             <hr />
         </div>
         
@@ -126,9 +139,7 @@
                     	<td>
                         	<table id="tbNVThongBao">
                     			<tr>
-									
-
-                        			<th colspan="2">Nhân viên thông báo</th>
+                        			<th colspan="2" class="title">Nhân viên thông báo</th>
                         		</tr>
                         
                         		<tr>
@@ -150,7 +161,7 @@
                         		</tr>
                         
                         		<tr>
-                        			<th colspan="2">Nội dung sự cố</th>
+                        			<th colspan="2" class="title">Nội dung sự cố</th>
                         		</tr>
 								<tr>
 									<td>
@@ -198,7 +209,7 @@
                         <td>
                         	<table id="tbNVGapSuCo">
                     			<tr>
-                        			<th colspan="2">Nhân viên gặp sự cố</th>
+                        			<th colspan="2" class="title">Nhân viên gặp sự cố</th>
                         		</tr>
                         
                         		<tr>
@@ -219,7 +230,7 @@
                         		</tr>
                         
                         		<tr>
-                        			<th colspan="2">Hình ảnh sự cố</th>
+                        			<th colspan="2" class="title">Hình ảnh sự cố</th>
                         		</tr>
                         
                         		<tr>
@@ -241,21 +252,18 @@
                         </td>
                         
                         <tr>
-                        	<td colspan="2" align="right">
-                            	<input class="Button" type="submit" id="btnDongY" name="btnDongY" value="Đồng ý"/>
+                        	<td style="text-align: right">
+                            	<input class="btn btn-success" type="submit" id="btnDongY" name="btnDongY" value="Đồng ý"/>
                             </td>
                         </tr>
                     </tr>
-                	
                 </table>
-                
-                
             </form>
         </div>
         
-        <div id="Footer">
+        <div id="Footer" >
         	<hr />
-            <p>Đại Học Cần Thơ</p>
+            <p class="text-secondary">Đại Học Cần Thơ</p>
         </div>
 	</div>
 	
