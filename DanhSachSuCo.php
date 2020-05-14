@@ -25,16 +25,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <style>
-    #Container {
-      margin-top: 0px;
-    }
-  </style>
 </head>
 
 <body>
-  <div id="Container">
     <div class="table-agile-info">
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -42,7 +35,7 @@
         </div>
 
         <div class="table-responsive">
-          <table class="table table-striped b-t b-light">
+          <table class="table table-striped b-light" >
             <thead>
               <tr>
                 <th>#</th>
@@ -110,10 +103,6 @@
         </footer>
       </div>
     </div>
-
-
-  </div>
-
 </body>
 
 </html>
