@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Source+Code+Pro:ital,wght@1,700&display=swap');
+
+
 /* reset css   */
 *{
     padding: 0;
@@ -19,7 +22,10 @@ ul li{ list-style: none;}
 /* body{
     height: 1000px;
 } */
-
+* {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+}
 
 
 
@@ -30,8 +36,11 @@ ul li{ list-style: none;}
 }
 
 .header{
-    
-    background: #fff;
+
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+
+
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "logo conten user";
@@ -65,7 +74,7 @@ ul li{ list-style: none;}
       text-align: center;
       white-space: nowrap;
       overflow: hidden;transform: translateY(-50%);
-      font-family: 'Zhi Mang Xing', cursive;  
+      font-family: 'Zhi Mang Xing', cursive;
 }
 
 .anim-typewriter {
@@ -97,14 +106,10 @@ ul li{ list-style: none;}
 .header .header-logo .button-menu{
     border: none;
     outline: none;
-    background: white;
+    background: transparent;
     border-radius: 100px;
     width: 50px;
     height: 50px;
-}
-.header .header-logo .button-menu:hover{
-    background: #E7E7E7;
-    
 }
 .header .header-logo .button-menu i{
     font-size: 32px;
@@ -136,9 +141,8 @@ ul li{ list-style: none;}
 .header-user-notify .name{
     font-weight: 900;
     color: #292826;
-    text-transform: uppercase;
-    font-family: 'Bangers', cursive;
     font-size: 24px;
+    text-transform: capitalize;
 }
 .header .header-user .button-log-out{
     border: none;
@@ -183,25 +187,14 @@ ul li{ list-style: none;}
     left: 0;
     min-height: 100vh;
     overflow: auto;
-
-    
     z-index: 99999;
-    
-    
-   
-    
-    
-
-
 }
-
 .menu-lateral{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 120vh;
-    
+    min-height: 130vh;
 }
 .menu-lateral li{
     list-style: none;
@@ -230,9 +223,14 @@ ul li{ list-style: none;}
     align-items: center;
     padding: 12px 30px;
     position: relative;
-    color: #49657b
+    color: #49657b;
+    text-decoration: none;
 }
 .menu-lateral a:hover{
+    background: #e5e5e5;
+    text-decoration: none;
+}
+.menu-lateral a:focus {
     background: #e5e5e5;
 }
 .menu-lateral i{
@@ -260,23 +258,12 @@ ul li{ list-style: none;}
     height: 100%;
     background-color:#49657b;
 }
-/* .menu-lateral a.active i{
-    animation: roate 1s infinite;
-}
-@-webkit-keyframes roate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(180deg);
-    }
-} */
 .content{
     position: absolute;
     top: 0;
     grid-area: content;
     background:  #f7f7f7;
     width: 100%;
-    /* height: 1500px; */
+
    
 }
