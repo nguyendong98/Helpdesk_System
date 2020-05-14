@@ -39,17 +39,31 @@
 <title>Báo cáo sự cố</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
+	#Header{
+		position: relative;
+		height: 57px;
+		line-height: 57px;
+		letter-spacing: 0.2px;
+		color: #000;
+		font-size: 18px;
+		font-weight: bold;
+		padding: 0 16px;
+		background: #ddede0;
+		border-top-right-radius: 2px;
+		border-top-left-radius: 2px;
+		text-transform: uppercase;
+		text-align: center;
 
-	#Header h3{
+	}
+	/* #Header h3{
 		font-size: 2rem;
 		font-weight: bold;
 		margin-left: 1rem;
 		text-shadow: 1px 1px 2px gray;
-	}
+	} */
 	
 	#Content{
 		margin: 1rem 1rem;
-		height: 500px;
 		background: #EEF9F0;
 		box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.75);
 		
@@ -63,14 +77,16 @@
 		margin:auto;
 		width: 1000px;
 		height: 450px;
-		text-align: right;
 		
 	}
 	
 	#Content #tbThongBaoSuCo td{
-		text-align:right;
 		border-spacing: 30px;
 		
+	}
+	#tbThongBaoSuCo td{
+		text-align: left;
+		padding: 0 1rem;
 	}
 	
 	#Content #tbNVThongBao{
@@ -84,10 +100,6 @@
 		
 	}
 	
-	#Content #tbNVThongBao td{
-		text-align: center;	
-	}
-	
 	#Content #tbNVGapSuCo{
 		float:left;
 		height: 330px;
@@ -98,14 +110,9 @@
 		text-align:left;	
 	}
 	
-	#Content #tbNVGapSuCo td{
-		text-align: center;	
-	}
-	
 	.rightTable input, select, textarea{
 		width: 180px;
 		border-radius: px;
-		box-shadow: 4px 6px 14px -8px rgba(0,0,0,0.75);
 		color: gray;
 	}
 	
@@ -120,32 +127,33 @@
 		font-weight:bold;
 		color:#FFF;	
 	}
+	.title{
+		font-size: 1.5rem;
+	}
 
 </style>
 
 </head>
 
 <body>
-	<div id="Container">
+	<div style="background: #EEF9F0;">
     	<div id="Header">
-        	<h3>CUNG CẤP THÔNG TIN SỰ CỐ</h3>
-            <hr />
+        	CUNG CẤP THÔNG TIN SỰ CỐ
         </div>
-        
-        <div id="Content">
+        <div id="Content" class="pb-4">
         	<form id="frmBaoSuCo" name="frmBaoSuCo" method="post" action="" enctype="multipart/form-data">
             	<table id="tbThongBaoSuCo">
                 	<tr>
                     	<td>
                         	<table id="tbNVThongBao">
                     			<tr>
-                        			<th colspan="2" class="title">Nhân viên thông báo</th>
+                        			<th colspan="2" class="title text-secondary">Nhân viên thông báo</th>
                         		</tr>
                         
                         		<tr>
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
-                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" >
+                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" class="form-control" id="exampleFormControlSelect1" >
 											<?php
 												if(isset($_SESSION['id'])){
 													$id = $_SESSION['id'];
@@ -161,14 +169,14 @@
                         		</tr>
                         
                         		<tr>
-                        			<th colspan="2" class="title">Nội dung sự cố</th>
+                        			<th colspan="2" class="title text-secondary">Nội dung sự cố</th>
                         		</tr>
 								<tr>
 									<td>
 										Phần cứng
 									</td>
 									<td class="rightTable">
-										<select id="phancung" name="phancung">
+										<select id="phancung" name="phancung" class="form-control" id="exampleFormControlSelect1">
 												<?php
 													if(isset($_SESSION['id'])){														
 														// print_r($id);
@@ -186,7 +194,7 @@
                         			<td> 
                             			Thời điểm gặp sự cố</td>
                             		<td class="rightTable">
-                                		<input type="date" id="txtThoiDiem" name="txtThoiDiem"/>
+                                		<input type="date" class="form-control" name="txtThoiDiem"/>
                             		</td>
                         		</tr>
                         
@@ -194,14 +202,14 @@
                         			<td>Địa điểm gặp sự cố</td>
                             
                             		<td class="rightTable">
-                            			<input type="text" id="txtDiaDiem" name="txtDiaDiem"/>
+                            			<input type="text" class="form-control" name="txtDiaDiem"/>
                             		</td>
                         		</tr>
                         
                         		<tr>
                         			<td height="90px">Mô tả chi tiết</td>
                             
-                            		<td class="rightTable"><textarea id="txtChiTiet" name="txtChiTiet" rows="5"></textarea></td>
+                            		<td class="rightTable"><textarea class="form-control" id="txtChiTiet" name="txtChiTiet" rows="5"></textarea></td>
                         		</tr>
                  			</table>
                         </td>
@@ -209,13 +217,13 @@
                         <td>
                         	<table id="tbNVGapSuCo">
                     			<tr>
-                        			<th colspan="2" class="title">Nhân viên gặp sự cố</th>
+                        			<th colspan="2" class="title text-secondary">Nhân viên gặp sự cố</th>
                         		</tr>
                         
                         		<tr>
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
-                            			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo">
+                            			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo" class="form-control" id="exampleFormControlSelect1">
 											<?php
 												if(isset($_SESSION['id'])){													
 													// print_r($id);
@@ -230,7 +238,7 @@
                         		</tr>
                         
                         		<tr>
-                        			<th colspan="2" class="title">Hình ảnh sự cố</th>
+                        			<th colspan="2" class="title text-secondary">Hình ảnh sự cố</th>
                         		</tr>
                         
                         		<tr>
@@ -243,7 +251,6 @@
                         
                         		<tr>
 									<td class="rightTable" colspan="2" height="150px">
-                                        <img src="" height="150px" width="350px"/>
                                     </td>                        			
                         		</tr>
                         
@@ -251,14 +258,13 @@
                            </table>
                         </td>
                         
-                        <tr>
-                        	<td style="text-align: right">
-                            	<input class="btn btn-success" type="submit" id="btnDongY" name="btnDongY" value="Đồng ý"/>
-                            </td>
-                        </tr>
+                        
                     </tr>
-                </table>
-            </form>
+				</table>
+				<div class="d-flex justify-content-center mb-4">
+					<input class="btn btn-success w-25 py-3" type="submit" id="btnDongY" name="btnDongY" value="Đồng ý"/>
+				</div>
+			</form>
         </div>
         
         <div id="Footer" >

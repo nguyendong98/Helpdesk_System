@@ -812,7 +812,7 @@ ul.top-menu > li > a:focus {
   letter-spacing: 0.2px;
   color: #000;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: bold;
   padding: 0 16px;
   background: #ddede0;
   border-top-right-radius: 2px;
