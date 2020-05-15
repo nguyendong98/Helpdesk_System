@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded",function(){
     contenedor.classList.toggle("active")
     })
     AOS.init({
-        duration: 1200,
+        duration: 1500,
     })
 },false)

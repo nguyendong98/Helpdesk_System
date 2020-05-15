@@ -56,7 +56,9 @@
                <p class="line anim-typewriter">Welcome to Helpdesk System<span>.</span></p>
             </div>
             <div class="header-user" data-aos="fade-left" data-aos-duration="2000">
-              <div class="header-user-notify">Chào <span class="name"><?=$_SESSION['username']?></span></div>
+              <div class="header-user-notify">
+                  <img src="<?=$_SESSION['avatar']?>" alt="" class="avatar">
+              </div>
               <form action="" method="POST">
               <button type="submit" name="logout" class="button-log-out">
                <i class="fa fa-share-square" aria-hidden="true"></i>

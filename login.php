@@ -14,7 +14,7 @@
 			$_SESSION['id'] = $row['TK_ID'];
 			$_SESSION['username'] = $row['TK_USERNAME'];
 			$_SESSION['role'] = $row['TK_ROLE'];
-			
+			$_SESSION['avatar'] = $row['TK_AVATAR'];
 				echo "<script language='javascript'>
 							alert('Chào bạn đã đăng nhập vào hệ thống ');
 							window.open('index.php', '_self' , 1);

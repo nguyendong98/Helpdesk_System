@@ -37,14 +37,11 @@ ul li{ list-style: none;}
 
 .header{
 
-    background-color: #FFDEE9;
-    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
-
-
+    background: #1e1f26 !important;
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "logo conten user";
-    padding: 10px 20px;
+    padding: 15px 20px;
     position: fixed;
     top: 0;
     box-shadow: 0 0 5px rgba(0,0,0,0.25);
@@ -75,6 +72,7 @@ ul li{ list-style: none;}
       white-space: nowrap;
       overflow: hidden;transform: translateY(-50%);
       font-family: 'Zhi Mang Xing', cursive;
+      color: #aaaaaa;
 }
 
 .anim-typewriter {
@@ -93,7 +91,7 @@ ul li{ list-style: none;}
 
 @keyframes blinkTextCursor {
       from {
-            border-right-color: black;
+            border-right-color: #aaaaaa;
       }
       to {
             border-right-color: transparent;
@@ -110,17 +108,19 @@ ul li{ list-style: none;}
     border-radius: 100px;
     width: 50px;
     height: 50px;
+    margin-right: 10px;
 }
 .header .header-logo .button-menu i{
     font-size: 32px;
+    color: #aaaaaa;
 }
 .header .header-logo img{
-    width: 100px;
+    width: 150px;
     height: 60px;
+
 }
 .header-logo{
     display: flex;
-    
     align-items: center;
     height: 100%;
 }
@@ -133,27 +133,33 @@ ul li{ list-style: none;}
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #aaaaaa;
 }
 
 .header .header-user .header-user-notify{
     margin-right: 10px;
+    color: #aaaaaa;
 }
-.header-user-notify .name{
-    font-weight: 900;
-    color: #292826;
-    font-size: 24px;
-    text-transform: capitalize;
+.header .header-user .header-user-notify i{
+    font-size: 32px;
+    color: #aaaaaa;
+}
+.header .header-user .header-user-notify .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 .header .header-user .button-log-out{
     border: none;
     outline: none;
-    background: white;
+    background: transparent;
 }
 .header .header-user .button-log-out i{
     font-size: 32px;
 }
 .button-log-out i{
-    color: #3d1e6d;
+    color: #aaaaaa;
 }
 /* end css header */ 
 
@@ -166,28 +172,32 @@ ul li{ list-style: none;}
     left: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 100px auto;
     grid-template-areas: "nav-left content";
     width: 100%;
 }
 .main.active{
-    grid-template-columns: 100px auto;
+    grid-template-columns: 250px auto;
 }
 .main.active .full-nav{
-    width: 100px;
+    width: 250px;
+}
+.main span{
+    display: none;
 }
 .main.active span{
-    display: none;
+    display: block;
 }
 .full-nav{
     grid-area: nav-left;
-    width: 300px;
+    width: 100px;
     position: fixed;
     top: 90px;
     left: 0;
     min-height: 100vh;
     overflow: auto;
     z-index: 99999;
+    background: #1e1f26;
 }
 .menu-lateral{
     position: absolute;
@@ -201,7 +211,7 @@ ul li{ list-style: none;}
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
   }
   
   /* Track */
@@ -211,7 +221,7 @@ ul li{ list-style: none;}
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: whitesmoke;
   }
   
   /* Handle on hover */
@@ -223,25 +233,29 @@ ul li{ list-style: none;}
     align-items: center;
     padding: 12px 30px;
     position: relative;
-    color: #49657b;
+    color: #aaaaaa;
     text-decoration: none;
 }
 .menu-lateral a:hover{
-    background: #e5e5e5;
+    background: #aaaaaa;
     text-decoration: none;
 }
-.menu-lateral a:focus {
-    background: #e5e5e5;
+.menu-lateral a:hover  i {
+    color: #1e1f26 !important;
+}
+.menu-lateral a:hover span{
+    color: #1e1f26 !important;
 }
 .menu-lateral i{
     font-size: 30px;
-    color: #606060;
+    color: #aaaaaa;
 
 }
 
 .menu-lateral a span{
     margin-left: 28px;
-    color: #49657b;
+    color: #aaaaaa;
+    font-weight: 900;
 }
 .menu-lateral a.active{
     background:  #e5e5e5;

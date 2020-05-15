@@ -6,7 +6,8 @@
 <!-- //Xử lí thêm sự cố -->
 <?php
 	if(isset($_POST['btnDongY'])){
-		$SC_IDNVTHONGBAO = $_POST['slTenNhanVien_ThongBao'];
+	    $idnv_thongbao = $_SESSION['id'];
+		$SC_IDNVTHONGBAO = $idnv_thongbao;
 		$SC_IDNVGAPSUCO = $_POST['slTenNhanVien_GapSuCo'];
 		$SC_THOIDIEMGAP = $_POST['txtThoiDiem'];
 		$SC_DIADIEM = $_POST['txtDiaDiem'];
@@ -19,7 +20,7 @@
 		$sql = mysqli_query($conn, "INSERT INTO suco(SC_IDNVTHONGBAO, SC_IDNVGAPSUCO, SC_THOIDIEMGAP, 
 		SC_DIADIEM, SC_IDPHANCUNG, SC_MOTACHITIET, SC_ANHMANHINH, SC_IDTRANGTHAI) 
 		VALUES('$SC_IDNVTHONGBAO', '$SC_IDNVGAPSUCO', '$SC_THOIDIEMGAP', '$SC_DIADIEM',
-		'$SC_IDPHANCUNG', '$SC_MOTACHITIET', '$hinhanh', 'Chưa xủ lí')");
+		'$SC_IDPHANCUNG', '$SC_MOTACHITIET', '$hinhanh', 'Chưa xử lí')");
 		if($sql){
 			echo "<script>
                  alert('Thêm thành công');   
@@ -48,7 +49,7 @@
 		font-size: 18px;
 		font-weight: bold;
 		padding: 0 16px;
-		background: #ddede0;
+		background: whitesmoke;
 		border-top-right-radius: 2px;
 		border-top-left-radius: 2px;
 		text-transform: uppercase;
@@ -64,16 +65,12 @@
 	
 	#Content{
 		margin: 1rem 1rem;
-		background: #EEF9F0;
+		background: whitesmoke;
 		box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.75);
 		
 	}
 	
 	#Content #tbThongBaoSuCo{
-		/* border-top: 1px solid #666;
-		border-bottom: 1px solid #666;
-		border-left: 0px;
-		border-right: 1px solid #666; */
 		margin:auto;
 		width: 1000px;
 		height: 450px;
@@ -112,7 +109,6 @@
 	
 	.rightTable input, select, textarea{
 		width: 180px;
-		border-radius: px;
 		color: gray;
 	}
 	
@@ -120,13 +116,7 @@
 		text-align:center;
 	}
 
-	.Button{
-		background: #0776BE;
-		height: 30px;
-		width: 100px;	
-		font-weight:bold;
-		color:#FFF;	
-	}
+
 	.title{
 		font-size: 1.5rem;
 	}
@@ -153,7 +143,7 @@
                         		<tr>
                         			<td>Tên nhân viên</td>
                             		<td class="rightTable">
-                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" class="form-control" id="exampleFormControlSelect1" >
+                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" class="form-control" id="exampleFormControlSelect1" disabled >
 											<?php
 												if(isset($_SESSION['id'])){
 													$id = $_SESSION['id'];
@@ -176,7 +166,7 @@
 										Phần cứng
 									</td>
 									<td class="rightTable">
-										<select id="phancung" name="phancung" class="form-control" id="exampleFormControlSelect1">
+										<select id="phancung" name="phancung" class="form-control" id="exampleFormControlSelect1" required>
 												<?php
 													if(isset($_SESSION['id'])){														
 														// print_r($id);
@@ -202,14 +192,14 @@
                         			<td>Địa điểm gặp sự cố</td>
                             
                             		<td class="rightTable">
-                            			<input type="text" class="form-control" name="txtDiaDiem"/>
+                            			<input type="text" class="form-control" name="txtDiaDiem" required/>
                             		</td>
                         		</tr>
                         
                         		<tr>
                         			<td height="90px">Mô tả chi tiết</td>
                             
-                            		<td class="rightTable"><textarea class="form-control" id="txtChiTiet" name="txtChiTiet" rows="5"></textarea></td>
+                            		<td class="rightTable"><textarea class="form-control" id="txtChiTiet" name="txtChiTiet" rows="5" required></textarea></td>
                         		</tr>
                  			</table>
                         </td>
@@ -251,6 +241,9 @@
                         
                         		<tr>
 									<td class="rightTable" colspan="2" height="150px">
+                                        <div class="d-flex justify-content-center mb-4">
+                                            <input class="btn btn-success w-25 py-3" type="submit" id="btnDongY" name="btnDongY" value="Đồng ý" style="color: whitesmoke"/>
+                                        </div>
                                     </td>                        			
                         		</tr>
                         
@@ -261,9 +254,7 @@
                         
                     </tr>
 				</table>
-				<div class="d-flex justify-content-center mb-4">
-					<input class="btn btn-success w-25 py-3" type="submit" id="btnDongY" name="btnDongY" value="Đồng ý"/>
-				</div>
+
 			</form>
         </div>
         
