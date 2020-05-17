@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2020 at 04:29 AM
+-- Generation Time: May 17, 2020 at 07:56 PM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -123,7 +123,8 @@ INSERT INTO `suco` (`SC_ID`, `SC_IDNVTHONGBAO`, `SC_IDNVGAPSUCO`, `SC_THOIDIEMGA
 (8, 1, 1, '2020-04-19', '2020-04-19 16:23:04', 'Bến Tre', 1, 'Hư hỏng nhẹ', 'cpu.jpg', 'Đang xử lí'),
 (9, 1, 1, '2020-04-20', '2020-04-20 05:17:01', 'Bến Tre', 1, 'Bụi bẩn', '404.png', 'Chưa xử lí'),
 (10, 1, 3, '2020-05-15', '2020-05-15 02:25:23', 'Phòng tài chính', 3, 'Kẹt giấy', 'mayin.jpg', 'Chưa xử lí'),
-(11, 1, 6, '2020-05-15', '2020-05-15 02:26:49', 'Phòng nhân sự', 4, 'Điện thoại bàn bị rè', 'dienthoaiban.jpg', 'Chưa xử lí');
+(11, 1, 6, '2020-05-15', '2020-05-15 02:26:49', 'Phòng nhân sự', 4, 'Điện thoại bàn bị rè', 'dienthoaiban.jpg', 'Chưa xử lí'),
+(12, 1, 1, '2020-05-17', '2020-05-17 05:49:16', 'Phòng tài chính', 3, 'Hết mực in', 'mayinhetmuc.jpg', 'Chưa xử lí');
 
 -- --------------------------------------------------------
 
@@ -214,7 +215,7 @@ ALTER TABLE `phancung`
 -- AUTO_INCREMENT for table `suco`
 --
 ALTER TABLE `suco`
-  MODIFY `SC_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `SC_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `taikhoan`

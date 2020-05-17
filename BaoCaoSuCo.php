@@ -184,7 +184,7 @@
                         			<td> 
                             			Thời điểm gặp sự cố</td>
                             		<td class="rightTable">
-                                		<input type="date" class="form-control" name="txtThoiDiem"/>
+                                		<input type="date" class="form-control w-100" name="txtThoiDiem"/>
                             		</td>
                         		</tr>
                         
@@ -192,7 +192,7 @@
                         			<td>Địa điểm gặp sự cố</td>
                             
                             		<td class="rightTable">
-                            			<input type="text" class="form-control" name="txtDiaDiem" required/>
+                            			<input type="text" class="form-control w-100" name="txtDiaDiem" required/>
                             		</td>
                         		</tr>
                         
@@ -235,7 +235,7 @@
                         			<td>
                             			Đường dẫn</td>
                             		<td class="rightTable">
-                                		<input type="file" id="txtDuongDan" name="hinhanh"/>
+                                		<input type="file" class="w-100" id="txtDuongDan" name="hinhanh"/>
                             		</td>
                         		</tr>
                         

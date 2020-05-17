@@ -17,14 +17,11 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="css/css/font.css" />
-  <link rel="stylesheet" href="css/css/font-awesome.css" />
-  <link rel="stylesheet" href="css/css/style.css" />
-  <link rel="stylesheet" href="css/css/style-responsive.css" />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/css/style.css" />
+
+
+
 </head>
 
 <body>
@@ -51,20 +48,28 @@
             </thead>
             <tbody>
               <?php
-                $sql = mysqli_query($conn, "select nhanvien.NV_HOTEN,suco.SC_ID, suco.SC_THOIDIEMGAP, suco.SC_THOIDIEMGHINHAN, 
+                $item_per_page = !empty($_GET['per_page'])?$_GET['per_page']:2; //số item trên 1 trang
+                $current= !empty($_GET['page'])?$_GET['page']:1;    // trang hiện tại
+                $offset = ($current - 1) * $item_per_page;      // item bắt đầu của mỗi trang
+                $sql = "select nhanvien.NV_HOTEN,suco.SC_ID, suco.SC_THOIDIEMGAP, suco.SC_THOIDIEMGHINHAN, 
+                suco.SC_MOTACHITIET, suco.SC_ANHMANHINH, suco.SC_IDTRANGTHAI, suco.SC_DIADIEM, phancung.PC_TEN 
+                FROM nhanvien, suco, phancung 
+                WHERE nhanvien.NV_ID = suco.SC_IDNVGAPSUCO AND suco.SC_IDPHANCUNG=phancung.PC_ID AND suco.SC_IDTRANGTHAI='Chưa xử lí'
+                order by suco.SC_ID desc limit ".$item_per_page." offset ".$offset." ";
+                $total_item = mysqli_query($conn, "select nhanvien.NV_HOTEN,suco.SC_ID, suco.SC_THOIDIEMGAP, suco.SC_THOIDIEMGHINHAN, 
                 suco.SC_MOTACHITIET, suco.SC_ANHMANHINH, suco.SC_IDTRANGTHAI, suco.SC_DIADIEM, phancung.PC_TEN 
                 FROM nhanvien, suco, phancung 
                 WHERE nhanvien.NV_ID = suco.SC_IDNVGAPSUCO AND suco.SC_IDPHANCUNG=phancung.PC_ID AND suco.SC_IDTRANGTHAI='Chưa xử lí' ");
-                if(mysqli_num_rows($sql) > 0){
-                  $i  = 1;
-                  while($row = mysqli_fetch_assoc($sql)){
-                    
+                $total_item = $total_item->num_rows;  // tổng số item
+                $result=mysqli_query($conn, $sql);
+                $total_page= ceil($total_item/$item_per_page); //tổng số trang
+                if(mysqli_num_rows($result) > 0){
+
+                  while($row = mysqli_fetch_assoc($result)){
               ?>
               <tr>
-                <td><?=$i?></td>  
+                <td><?=$offset+1?></td>
                 <td><?=$row['NV_HOTEN']?></td>
-                
-
                 <td><?=$row['SC_THOIDIEMGAP']?></td>
                 <td><?=$row['PC_TEN']?></td>
                 <td><?=$row['SC_MOTACHITIET']?></td>
@@ -77,27 +82,20 @@
                   </a>
                 </td>
               </tr>
-                  <?php $i++; }  } ?>      
+                  <?php $offset++; }  } ?>
 
             </tbody>
           </table>
         </div>
-        <footer class="panel-footer">
+        <footer class="panel-footer mt-3  ">
           <div class="row">
 
             <div class="col-sm-5 text-center">
               <small class="text-muted inline m-t-sm m-b-sm"></small>
             </div>
 
-            <div class="col-sm-7 text-right text-center-xs">
-              <ul class="pagination pagination-sm m-t-none m-b-none">
-                <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
-                <li><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
-              </ul>
+            <div class="col-sm-7 text-right text-center-xs ">
+              <?php include 'phantrang.php' ?>
             </div>
           </div>
         </footer>
