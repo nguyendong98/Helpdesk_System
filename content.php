@@ -20,6 +20,9 @@
             case "thongtinphancung":
 				include ("thongtinphancung.php");
 				break;
+			case "sucomoi":
+				include ("sucomoi.php");
+				break;
         }
     }else{
 		include 'Home.php';
