@@ -23,6 +23,8 @@
 			case "sucomoi":
 				include ("sucomoi.php");
 				break;
+			case "Ketqua":
+				include ("Ketqua.php");
         }
     }else{
 		include 'Home.php';

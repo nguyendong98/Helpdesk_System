@@ -95,7 +95,7 @@
                 <td><?=$row['PC_TEN']?></td>
                 <td><?=$row['SC_MOTACHITIET']?></td>
                 <td><img src="upload/<?=$row['SC_ANHMANHINH']?>" alt="" style="width: 80px; height:50px"></td>
-                <td><div class="badge badge-warning"><?=$row['SC_IDTRANGTHAI']?></div></td>
+                <td><?=$row['SC_IDTRANGTHAI']?></td>
 
                 <td style="width: 12%">
                   <a style="font-size: 20px" href="index.php?content=sucomoi&SC_ID=<?=$row['SC_ID']?>">
