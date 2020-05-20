@@ -5,7 +5,7 @@
                 include ("BaoCaoSuCo.php");
                 break;
             case "tracuuloi":
-                include("tracuuloi.php");
+                include("Tracuuloi.php");
                 break;    
             case "home":
                 include ("Home.php");    
