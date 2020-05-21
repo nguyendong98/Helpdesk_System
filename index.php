@@ -84,9 +84,9 @@
                      <a class="func" href="index.php?content=danhsachsuco"><i class="fa fa-hand-o-right" ></i> <span>Phân công</span></a>
                      <a class="func" href="index.php?content=Ketqua"><i class="fa fa-calendar-check-o" ></i><span> Kết quả</span></a>
                      <hr>
-                     <a class="func" href="#"><i class="fa fa-list-alt" ></i> <span>Danh sách FAQ</span></a>
-                     <a class="func" href="#"><i class="fa fa-plus-square" ></i><span> Thêm mới FAQ</span></a>
-                     <a class="func" href="#"><i class="fa fa-wrench" ></i> <span>Cập nhật FAQ</span></a>
+                     <a class="func" href="index.php?content=xemfaq"><i class="fa fa-list-alt" ></i> <span>Danh sách FAQ</span></a>
+                     <a class="func" href="index.php?content=themmoifaq"><i class="fa fa-plus-square" ></i><span> Thêm mới FAQ</span></a>
+                     <a class="func" href="index.php?content=suafaq"><i class="fa fa-wrench" ></i> <span>Cập nhật FAQ</span></a>
                    </nav>
                    
                </div>
