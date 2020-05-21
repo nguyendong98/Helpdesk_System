@@ -9,23 +9,23 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Danh sách FAQ</title>
 		<link rel="stylesheet" href="css/style.css">
-		
 		<style>
 			
 			body {
 				margin: 10px;
-				
-				
+				background: whitesmoke;
 			}
-			
 			#faqtable th,td
 			{
 				padding: 10px;
 				
 			}
 			#frmfaq {
-				text-align: right;
+				text-align: center;
 				width: 100%;
+				background: #eef9f0;
+				box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.75);
+				padding-bottom: 1rem;
 				
 			}
 			#faqtable {
@@ -48,14 +48,13 @@
 	
 	<body>
 		<div id ="container">
-		<div id="Header">
-        	<h3>XEM DANH SÁCH FAQ</h3>
-            <hr />
+		<div id="Header" style="text-align: center; background: #ddede0; padding: 16px;">
+        	<div style="font-size: 20px; font-weight: bold">XEM DANH SÁCH FAQ</div>
         </div>
 		<div id="newfaq">
 			<form id= "frmfaq" name ="frmfaq" method = "post" action="" enctype="multipart/form-data">
-				<table border = "1" id="faqtable">
-					<tr>
+				<table class="table table-striped w-100">
+					<tr class="text-align-center">
 						<th> Tên sự số </th>
 						<th> Hình ảnh </th>
 						<th> Chi tiết </th>
@@ -78,7 +77,7 @@
 								<tr>
 									
 									<td><?=$row['tensuco']?></td>
-									<td><img src="<?=$row['hinhanhsuco']?>"></td>
+									<td ><img style="width: 50px; height: 50px" src="<?=$row['hinhanhsuco']?>"></td>
 									<td><?=$row['chitiet']?></td>
 									<td><?=$row['khacphuc']?></td>
 								</tr>
@@ -93,21 +92,12 @@
 								
 								}
 							?>
-					
 				</table>
 					<div class="col-sm-7 text-right text-center-xs ">
 							<?php include "phantrang_faq.php" ?>
 					</div>
-				
 			</form>
 		</div> <!-- end div faq-->
 		</div>
-	
-	
-	
 	</body>
-		
-		
-
-
 </html>
