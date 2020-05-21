@@ -20,11 +20,17 @@
 		<title>Cập nhật FAQ</title>
 		<link rel="stylesheet" href="css/style.css">
 		<style>
+			body{
+				background: whitesmoke;
+			}
 			#frmupfaq 
 			{
 				width: 100%;
-				
-				
+				text-align: center;
+				width: 100%;
+				background: #eef9f0;
+				box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.75);
+				padding-bottom: 1rem;
 			}
 			
 			#upfaqtable{
@@ -61,20 +67,19 @@
 	</head>
 	
 	<body>
-		<div id="Header">
-        	<h3>CẬP NHẬT FAQ</h3>
-            <hr />
+        <div id="Header" style="text-align: center; background: #ddede0; padding: 16px;">
+        	<div style="font-size: 20px; font-weight: bold">CẬP NHẬT DANH SÁCH FAQ</div>
         </div>
 		<div id="upfaq">
 			<form id= "frmupfaq" name ="frmupfaq" method = "post" action="" enctype="multipart/form-data">
-				<table border = "1" id="upfaqtable">
+				<table class="table table-striped w-100">
 					<tr>
 						<th> Id FAQ</th>
 						<th> Tên sự số </th>
 						<th> Hình ảnh </th>
 						<th> Chi tiết </th>
 						<th> Cách khắc phục </th>
-						<th> Sửa</th>
+						<th> Tùy chọn</th>
 					</tr>
 					<?php
 						$item_per_page = !empty($_GET['per_page'])?$_GET['per_page']:2; //số item trên 1 trang
@@ -93,11 +98,14 @@
 								<tr>
 									<td><?=$row['idfaq']?></td>
 									<td><?=$row['tensuco']?></td>
-									<td><img src="<?=$row['hinhanhsuco']?>"></td>
+									<td><img style="width: 50px; height: 50px" src="<?=$row['hinhanhsuco']?>"></td>
 									<td><?=$row['chitiet']?></td>
 									<td><?=$row['khacphuc']?></td>
-									<td> <a href= "index.php?content=formsuafaq&id_faq=<?=$row['idfaq']?>">
+									<td> <a href= "index.php?content=formsuafaq&id_faq=<?=$row['idfaq']?>" style="padding-right: 2rem">
 											<i class="fa fa-pencil-square-o text-success text-active"></i>
+										</a>
+										<a href= "#">
+											<i class="fa fa-trash-o text-danger" aria-hidden="true"></i>
 										</a>
 									</td>
 								</tr>
