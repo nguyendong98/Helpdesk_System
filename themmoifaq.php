@@ -57,43 +57,9 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		
 		<title> Thêm FAQ </title>
-		<link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/css/style.css" />
 		<style>
-			#newfaq
-			{
-				
-				/*background: gray;*/
-				
-			}
-			body {
-				margin: 10px;
-				
-				
-			}
-			
-			#newfaqtable th,td
-			{
-				padding: 10px;
-				
-			}
-			#frmnewfaq {
-				text-align: center;
-				width: 100%;
-				
-			}
-			#newfaqtable {
-				width: 100%;
-				text-align: left;
-			}
-			#btnsubmit{
-				margin-top:10px;
-				
-			}
-			#btnsubmit:hover {
-				
-				transition: 0.5s;
-				background: orange;
-			}
+
 		</style>
 	</head>
 
