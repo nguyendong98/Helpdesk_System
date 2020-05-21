@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2020 at 05:07 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Generation Time: May 17, 2020 at 07:56 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -20,29 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `helpdesk_system`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `faq`
---
-
-CREATE TABLE `faq` (
-  `idfaq` int(11) NOT NULL,
-  `tensuco` varchar(255) NOT NULL,
-  `hinhanhsuco` varchar(255) DEFAULT NULL,
-  `chitiet` varchar(255) NOT NULL,
-  `khacphuc` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `faq`
---
-
-INSERT INTO `faq` (`idfaq`, `tensuco`, `hinhanhsuco`, `chitiet`, `khacphuc`) VALUES
-(1, 'Update 1', 'upload/Zalo.jpg', 'details 1', 'solve 1'),
-(2, 'Update 2.2', 'upload/Twitter2.png', ' details 2.2', 'solve 2.2'),
-(3, 'Sự cố 3', 'upload/FB.png', 'Chi tiết 3 ', 'Chi tiết 3');
 
 -- --------------------------------------------------------
 
@@ -128,7 +106,7 @@ CREATE TABLE `suco` (
   `SC_IDNVTHONGBAO` int(11) NOT NULL,
   `SC_IDNVGAPSUCO` int(11) NOT NULL,
   `SC_THOIDIEMGAP` date NOT NULL,
-  `SC_THOIDIEMGHINHAN` timestamp NOT NULL DEFAULT current_timestamp(),
+  `SC_THOIDIEMGHINHAN` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `SC_DIADIEM` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `SC_IDPHANCUNG` int(11) NOT NULL,
   `SC_MOTACHITIET` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -180,12 +158,6 @@ INSERT INTO `taikhoan` (`TK_ID`, `TK_USERNAME`, `TK_PASSWORD`, `TK_AVATAR`, `TK_
 --
 
 --
--- Indexes for table `faq`
---
-ALTER TABLE `faq`
-  ADD PRIMARY KEY (`idfaq`);
-
---
 -- Indexes for table `nhanvien`
 --
 ALTER TABLE `nhanvien`
@@ -220,12 +192,6 @@ ALTER TABLE `taikhoan`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `faq`
---
-ALTER TABLE `faq`
-  MODIFY `idfaq` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `nhanvien`
