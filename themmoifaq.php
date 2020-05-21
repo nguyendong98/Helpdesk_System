@@ -58,6 +58,7 @@
 		
 		<title> Thêm FAQ </title>
         <link rel="stylesheet" href="css/css/style.css" />
+
 		<style>
 
 		</style>
@@ -65,14 +66,14 @@
 
 	<body>
 		
-	<div id ="container">
+	<div class="container">
 		<div id="Header">
-        	<h3>THÊM FAQ</h3>
+        	<h3 class='text-center my-5'>THÊM FAQ</h3>
             <hr />
         </div>
 		<div id="newfaq">
 			<form id= "frmnewfaq" name ="frmnewfaq" method = "post" action="" enctype="multipart/form-data">
-				<table border = "1" id="newfaqtable">
+				<table class="table table-striped b-light" id="newfaqtable">
 					<tr>
 						<th> Tên sự số </th>
 						<th> Hình ảnh </th>
@@ -82,14 +83,15 @@
 					<tr>
 						<td> <input type = "text" name= "tensuco"> </td>
 						<td> <input type = "file" name= "hinhanh"> </td>
-						<td> <textarea name= "chitiet" rows ="10"></textarea></td>
-						<td> <textarea name= "khacphuc" rows ="10"></textarea> </td>
+						<td> <textarea name= "chitiet" rows ="5"></textarea></td>
+						<td> <textarea name= "khacphuc" rows ="5"></textarea> </td>
 					</tr>
 				</table>
-				<input id ="btnsubmit" type="submit" name="addfaq" value="Thêm"> 
+				<input class="btn btn-success" id ="btnsubmit" type="submit" name="addfaq" value="Thêm">
 			</form>
-		</div> <!-- end div faq-->
+		</div>
 	</div>
+
 	
 	
 	

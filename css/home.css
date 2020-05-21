@@ -1,0 +1,17 @@
+.register {
+    padding: 2rem;
+    max-height: 80vh;
+}
+.register__images{
+     width: 45%;
+    margin-right: 3rem;
+
+ }
+.register-content {
+    text-align: center;
+    width: 40rem;
+    margin: 0 auto;
+    padding: 5rem;
+    background: whitesmoke;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}

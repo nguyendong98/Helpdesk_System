@@ -22,17 +22,12 @@
 <link rel="stylesheet" href="css/style.css">
 <style>
 
-	#Header h3{
-		font-size: 2rem;
-		font-weight: bold;
-		margin-left: 1rem;
-		text-shadow: 1px 1px 2px gray;
-	}
+
 	
 	#Content{
 		margin: 1rem 1rem;
 		height: 500px;
-		background: #EEF9F0;
+		background: whitesmoke;
 		box-shadow: 2px 2px 10px -1px rgba(0,0,0,0.75);
 		
 	}
@@ -109,25 +104,22 @@
 
 <body>
 	<div id="Container">
-    	<div id="Header">
-        	<h3>THÔNG TIN PHẦN CỨNG</h3>
+
+        	<h4 class="text-center  pt-3" style="font-weight: 700">THÔNG TIN PHẦN CỨNG</h4>
             <hr />
-        </div>
+
         
         <div id="Content">
         	<form id="frmBaoSuCo" name="frmBaoSuCo" method="post" action="" enctype="multipart/form-data">
             	<table id="tbThongBaoSuCo">
                 	<tr>
                     	<td>
-                        	<table id="tbNVThongBao">
-                    			<tr>
-                        			<th colspan="2" class="title">Tìm kiếm thông tin phần cứng</th>
-                        		</tr>
+                        	<table id="tbNVThongBao" >
                         
                         		<tr>
-                        			<td>Tên nhân viên</td>
-                            		<td class="rightTable">
-                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" >
+                        			<td class="text-left"> Tên nhân viên</td>
+                            		<td class="rightTable ">
+                            			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" class="form-control">
 											
 											
 											
@@ -149,9 +141,9 @@
                             		</td>
                         		</tr>
 								<tr>
-                        			<td>Danh sách phần cứng</td>
+                        			<td class="text-left">Danh sách phần cứng</td>
                             		<td class="rightTable">
-                            			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo">
+                            			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo" class="form-control">
 											<?php
 												if(isset($_SESSION['id'])){													
 													// print_r($id);
@@ -178,7 +170,7 @@
 								<tr>
 							
 
-									 <table width="100%" border="1">
+									 <table class="table table-striped b-light">
 								  <tr>
 									 <td>STT</td>
 									 <td>Tên nhân viên</td>
