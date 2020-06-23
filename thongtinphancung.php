@@ -18,7 +18,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Báo cáo sự cố</title>
+<title>Report trouble</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
 
@@ -105,7 +105,7 @@
 <body>
 	<div id="Container">
 
-        	<h4 class="text-center  pt-3" style="font-weight: 700">THÔNG TIN PHẦN CỨNG</h4>
+        	<h4 class="text-center  pt-3" style="font-weight: 700">HARDWARE INFORMATION</h4>
             <hr />
 
         
@@ -117,7 +117,7 @@
                         	<table id="tbNVThongBao" >
                         
                         		<tr>
-                        			<td class="text-left"> Tên nhân viên</td>
+                        			<td class="text-left"> Staff's name</td>
                             		<td class="rightTable ">
                             			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" class="form-control">
 											
@@ -141,7 +141,7 @@
                             		</td>
                         		</tr>
 								<tr>
-                        			<td class="text-left">Danh sách phần cứng</td>
+                        			<td class="text-left">List of hardware</td>
                             		<td class="rightTable">
                             			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo" class="form-control">
 											<?php
@@ -165,20 +165,20 @@
 								
 								
                         		<tr>
-                        			<th colspan="2" class="title">Thông tin chi tiết</th>
+                        			<th colspan="2" class="title">Details</th>
                         		</tr>
 								<tr>
 							
 
 									 <table class="table table-striped b-light">
 								  <tr>
-									 <td>STT</td>
-									 <td>Tên nhân viên</td>
-									<td>Mã số PC</td>
-									<td>Tên phần cứng</td>
-									<td>Ngày mua</td>
-									<td>Chủng loại</td>
-									<td>Mô tả chi tiết</td>
+									 <td>#</td>
+									 <td>Staff's name</td>
+									<td>Code</td>
+									<td>Hardware name</td>
+									<td>Date of purchase</td>
+									<td>Species</td>
+									<td>Detailed description</td>
 									
 								  </tr>
 									

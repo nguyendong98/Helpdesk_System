@@ -7,7 +7,7 @@
 	//insert data to SQL;
 	
 	
-	$_SESSION['message'] = "da phan cong";
+	$_SESSION['message'] = "Assigned";
 	
 	header('Location: index.php?content=danhsachsuco');
 ?>

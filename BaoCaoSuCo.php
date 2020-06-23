@@ -37,7 +37,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Báo cáo sự cố</title>
+<title>Report the trouble</title>
 <link rel="stylesheet" href="css/style.css">
 <style>
 	#Header{
@@ -128,7 +128,7 @@
 <body>
 	<div style="background: #EEF9F0;">
     	<div id="Header">
-        	CUNG CẤP THÔNG TIN SỰ CỐ
+		PROVIDING TROUBLE INFORMATION
         </div>
         <div id="Content" class="pb-4">
         	<form id="frmBaoSuCo" name="frmBaoSuCo" method="post" action="" enctype="multipart/form-data">
@@ -137,11 +137,11 @@
                     	<td>
                         	<table id="tbNVThongBao">
                     			<tr>
-                        			<th colspan="2" class="title text-secondary">Nhân viên thông báo</th>
+                        			<th colspan="2" class="title text-secondary">Notification officer</th>
                         		</tr>
                         
                         		<tr>
-                        			<td>Tên nhân viên</td>
+                        			<td>Name of employee</td>
                             		<td class="rightTable">
                             			<select id="slTenNhanVien_ThongBao" name="slTenNhanVien_ThongBao" class="form-control" id="exampleFormControlSelect1" disabled >
 											<?php
@@ -159,11 +159,11 @@
                         		</tr>
                         
                         		<tr>
-                        			<th colspan="2" class="title text-secondary">Nội dung sự cố</th>
+                        			<th colspan="2" class="title text-secondary">The troubles content</th>
                         		</tr>
 								<tr>
 									<td>
-										Phần cứng
+										Hardware
 									</td>
 									<td class="rightTable">
 										<select id="phancung" name="phancung" class="form-control" id="exampleFormControlSelect1" required>
@@ -182,14 +182,14 @@
                         		<tr>
 
                         			<td> 
-                            			Thời điểm gặp sự cố</td>
+									The time of the trouble</td>
                             		<td class="rightTable">
                                 		<input type="date" class="form-control w-100" name="txtThoiDiem"/>
                             		</td>
                         		</tr>
                         
                         		<tr>
-                        			<td>Địa điểm gặp sự cố</td>
+                        			<td>Location of the trouble</td>
                             
                             		<td class="rightTable">
                             			<input type="text" class="form-control w-100" name="txtDiaDiem" required/>
@@ -197,7 +197,7 @@
                         		</tr>
                         
                         		<tr>
-                        			<td height="90px">Mô tả chi tiết</td>
+                        			<td height="90px">Detailed description</td>
                             
                             		<td class="rightTable"><textarea class="form-control" id="txtChiTiet" name="txtChiTiet" rows="5" required></textarea></td>
                         		</tr>
@@ -207,11 +207,11 @@
                         <td>
                         	<table id="tbNVGapSuCo">
                     			<tr>
-                        			<th colspan="2" class="title text-secondary">Nhân viên gặp sự cố</th>
+                        			<th colspan="2" class="title text-secondary">Staff had a trouble</th>
                         		</tr>
                         
                         		<tr>
-                        			<td>Tên nhân viên</td>
+                        			<td>Name of employee</td>
                             		<td class="rightTable">
                             			<select id="slTenNhanVien_GapSuCo" name="slTenNhanVien_GapSuCo" class="form-control" id="exampleFormControlSelect1">
 											<?php
@@ -228,12 +228,12 @@
                         		</tr>
                         
                         		<tr>
-                        			<th colspan="2" class="title text-secondary">Hình ảnh sự cố</th>
+                        			<th colspan="2" class="title text-secondary">Photos of the trouble</th>
                         		</tr>
                         
                         		<tr>
                         			<td>
-                            			Đường dẫn</td>
+                            			URL</td>
                             		<td class="rightTable">
                                 		<input type="file" class="w-100" id="txtDuongDan" name="hinhanh"/>
                             		</td>
@@ -260,7 +260,7 @@
         
         <div id="Footer" >
         	<hr />
-            <p class="text-secondary">Đại Học Cần Thơ</p>
+            <p class="text-secondary">Can Tho university</p>
         </div>
 	</div>
 	

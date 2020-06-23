@@ -54,7 +54,18 @@
             <div class="header-content" >
                <p class="line anim-typewriter">Welcome to Helpdesk System<span>.</span></p>
             </div>
-            <div class="header-user" data-aos="fade-left" data-aos-duration="2000">
+
+                <script type="text/javascript">
+                  function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                  }
+                  </script>
+
+                  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                
+            <div class="header-user" id="google_translate_element">      
+            <div class="header-user" data-aos="fade-left" data-aos-duration="2000" >
               <div class="header-user-notify">
                   <img src="<?=$_SESSION['avatar']?>" alt="" class="avatar">
               </div>
@@ -71,22 +82,22 @@
                <div class="full-nav">
                    <nav class="menu-lateral">
                      <a class ="func " href="index.php?content=home"><i class="fa fa-home " ></i>
-                      <span>Trang chủ</span> </a>
+                      <span>Home</span> </a>
                      <hr>
-                     <a class="func" href="index.php?content=baocaosuco"><i class="fa fa-exclamation-triangle " ></i> <span>Báo lỗi</span></a>
+                     <a class="func" href="index.php?content=baocaosuco"><i class="fa fa-exclamation-triangle " ></i> <span>Error notification</span></a>
                      <a class="func" href="index.php?content=tracuuloi"><i class="fa fa-search " ></i></<a>
 
-                      <span>Tra cứu lỗi</span></a>
+                      <span>Look up trouble</span></a>
                      <hr>
-                     <a class="func" href="index.php?content=thongtinphancung"><i class="fa fa-book" ></i><span>Thông tin phần cứng</span></a>
+                     <a class="func" href="index.php?content=thongtinphancung"><i class="fa fa-book" ></i><span>Hardware information</span></a>
                      <hr>
-                     <a class="func" href="index.php?content=sucomoi"><i class="fa fa-newspaper-o" ></i><span> Sự cố mới</span></a>
-                     <a class="func" href="index.php?content=danhsachsuco"><i class="fa fa-hand-o-right" ></i> <span>Phân công</span></a>
-                     <a class="func" href="index.php?content=Ketqua"><i class="fa fa-calendar-check-o" ></i><span> Kết quả</span></a>
+                     <a class="func" href="index.php?content=sucomoi"><i class="fa fa-newspaper-o" ></i><span> New problem</span></a>
+                     <a class="func" href="index.php?content=danhsachsuco"><i class="fa fa-hand-o-right" ></i> <span>Assign</span></a>
+                     <a class="func" href="index.php?content=Ketqua"><i class="fa fa-calendar-check-o" ></i><span>Result</span></a>
                      <hr>
-                     <a class="func" href="index.php?content=xemfaq"><i class="fa fa-list-alt" ></i> <span>Danh sách FAQ</span></a>
-                     <a class="func" href="index.php?content=themmoifaq"><i class="fa fa-plus-square" ></i><span> Thêm mới FAQ</span></a>
-                     <a class="func" href="index.php?content=suafaq"><i class="fa fa-wrench" ></i> <span>Cập nhật FAQ</span></a>
+                     <a class="func" href="index.php?content=xemfaq"><i class="fa fa-list-alt" ></i> <span>List of FAQs</span></a>
+                     <a class="func" href="index.php?content=themmoifaq"><i class="fa fa-plus-square" ></i><span> Add a new FAQ</span></a>
+                     <a class="func" href="index.php?content=suafaq"><i class="fa fa-wrench" ></i> <span>Update FAQ</span></a>
                    </nav>
                    
                </div>

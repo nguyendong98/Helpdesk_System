@@ -7,7 +7,7 @@
   }
 	if($_SESSION['role'] != 1 ){
     echo "<script>
-      alert('Bạn không phải kĩ thuật viên');
+      alert('You are not a technician');
       window.open('index.php?content=home', '_self', 1);
     </script>";
   }
@@ -22,7 +22,7 @@
 		if ($sql){
 			echo "
 			<script language='javascript'>
-				alert('Cập nhập thành công');
+				alert('Update successful');
 				window.open('index.php?content=sucomoi', '_self' , 1);
 			</script>";
 		}
@@ -43,7 +43,7 @@
     <div class="table-agile-info">
       <div class="panel panel-default">
         <div class="panel-heading">
-          Danh sách sự cố mới
+        List of new trouble
         </div>
 
         <div class="table-responsive">
@@ -52,13 +52,13 @@
               <tr>
                 <th>#</th>
                 
-                <th>NV Gặp sự cố</th>
-                <th>Thời điểm</th>
-                <th>Phần cứng</th>
-                <th>Mô tả</th>
-                <th>Hình ảnh</th>
-                <th>Trạng thái</th>
-                <th>Hoàn thành</th>
+                <th>Staff had a trouble</th>
+                <th>Time</th>
+                <th>Hardware</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Finish</th>
               </tr>
             </thead>
             <tbody>

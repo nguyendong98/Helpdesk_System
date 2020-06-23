@@ -16,14 +16,14 @@
 			$_SESSION['role'] = $row['TK_ROLE'];
 			$_SESSION['avatar'] = $row['TK_AVATAR'];
 				echo "<script language='javascript'>
-							alert('Chào bạn đã đăng nhập vào hệ thống ');
+							alert('Welcome logged into the system');
 							window.open('index.php', '_self' , 1);
 					</script>";
 			
 		}else{
 			echo "
 							<script language='javascript'>
-								alert('Tài khoản không tồn tại');
+								alert('Account does not exist');
 								
 							</script>
 						";

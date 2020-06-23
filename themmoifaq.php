@@ -8,7 +8,7 @@
   }
 	if($_SESSION['role'] != 0 ){
     echo "<script>
-      alert('Bạn không đủ quyền hạn để vào trang này');
+      alert('You do not have sufficient permissions to access this page');
       window.open('index.php?content=home', '_self', 1);
     </script>";
   }
@@ -32,7 +32,7 @@
 		{
 			echo "<script> 
 			
-					alert('Thêm FAQ mới thành công!');
+					alert('Add the new FAQ successfully!');
 			
 					</script>";
 		}
@@ -56,7 +56,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		
-		<title> Thêm FAQ </title>
+		<title> Add FAQ </title>
         <link rel="stylesheet" href="css/css/style.css" />
 
 		<style>
@@ -68,17 +68,17 @@
 		
 	<div class="container">
 		<div id="Header">
-        	<h3 class='text-center my-5'>THÊM FAQ</h3>
+        	<h3 class='text-center my-5'>ADD FAQ</h3>
             <hr />
         </div>
 		<div id="newfaq">
 			<form id= "frmnewfaq" name ="frmnewfaq" method = "post" action="" enctype="multipart/form-data">
 				<table class="table table-striped b-light" id="newfaqtable">
 					<tr>
-						<th> Tên sự số </th>
-						<th> Hình ảnh </th>
-						<th> Chi tiết </th>
-						<th> Cách khắc phục </th>
+						<th> Trouble name </th>
+						<th> Image </th>
+						<th> Detail </th>
+						<th> How to fix </th>
 					</tr>
 					<tr>
 						<td> <input type = "text" name= "tensuco"> </td>

@@ -39,7 +39,7 @@
 					{
 						echo "<script>  
 						
-							alert('Sửa không thành công!');
+							alert('Fixing failed!');
 						
 						</script>";
 					}
@@ -64,7 +64,7 @@
 					{
 						echo "<script>  
 						
-							alert('Sửa không thành công!');
+							alert('Fixing failed!');
 						
 						</script>";
 					}
@@ -82,7 +82,7 @@
 <!DOCTYPE html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Sửa FAQ</title>
+		<title>Edit FAQ</title>
 		<link rel="stylesheet" href="css/style.css">
 		<style>
 			#frmupfaq 
@@ -126,10 +126,10 @@
 				<table border = "1" id="upfaqtable">
 					<tr>
 						<th> Id FAQ</th>
-						<th> Tên sự số </th>
-						<th> Hình ảnh </th>
-						<th> Chi tiết </th>
-						<th> Cách khắc phục </th>
+						<th> Trouble name </th>
+						<th> Image </th>
+						<th> Detail </th>
+						<th> How to fix </th>
 					</tr>
 					<?php
 						if($_GET["id_faq"])
@@ -156,7 +156,7 @@
 							else {
 								echo "<script> 
 									
-									alert('Lỗi truy xuất csdl!');
+									alert('error sql!');
 										
 								</script>";
 								

@@ -7,7 +7,7 @@
   }
 	if($_SESSION['role'] != 0 ){
     echo "<script>
-      alert('Bạn không đủ quyền hạn để vào trang này');
+      alert('You do not have sufficient permissions to access this page');
       window.open('index.php?content=home', '_self', 1);
     </script>";
   }
@@ -28,7 +28,7 @@
     <div class="table-agile-info">
       <div class="panel panel-default">
         <div class="panel-heading">
-          Danh sách sự cố chưa phân công
+        List of unassigned troubles
         </div>
 
         <div class="table-responsive">
@@ -36,14 +36,13 @@
             <thead>
               <tr>
                 <th>#</th>
-                
-                <th>NV Gặp sự cố</th>
-                <th>Thời điểm</th>
-                <th>Phần cứng</th>
-                <th>Mô tả</th>
-                <th>Hình ảnh</th>
-                <th>Trạng thái</th>
-                <th>Phân công</th>
+                <th>Staff had a trouble</th>
+                <th>Time</th>
+                <th>Hardware</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Assign</th>
               </tr>
             </thead>
             <tbody>

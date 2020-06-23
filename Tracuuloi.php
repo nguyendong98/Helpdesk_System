@@ -8,7 +8,7 @@
 <div class="s003 d-flex justify-content-center px-3 pb-5" >
 
     <form action="" method="POST" >
-        <h2 class="text-center mb-2" style="color: #aaaaaa">Bạn đang tìm kiếm sự cố gì ? ?</h2>
+        <h2 class="text-center mb-2" style="color: #aaaaaa">What problem are you looking for?</h2>
         <div class="inner-form" style="border-radius: 10px">
             <div class="input-field first-wrap d-flex justify-content-center align-items-center">
                 <div class="input-select">

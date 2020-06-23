@@ -10,7 +10,7 @@
 			if($sql){
 				$sql1 = mysqli_query($conn, "UPDATE suco SET SC_IDTRANGTHAI = 'Đang xử lí' WHERE SC_ID = '$id_sc' ");
 				echo "<script language='javascript'>
-							alert('Phân công thành công');
+							alert('Assignment successful');
 							window.open('index.php?content=danhsachsuco', '_self' , 1);
 					</script>";
 			}
@@ -43,19 +43,19 @@
 		<div class="table-agile-info">
         <div class="panel panel-default">
           <div class="panel-heading">
-            Phân công nhiệm vụ
+            Assignment of duties
           </div>
           <form action="" method='POST'>
           <div class="table-responsive">
             <table class="table table-striped b-t b-light">
               <thead>
                 <tr>
-                  <th>Mã sự cố</th>
-                  <th>Mô tả</th>
-				  <th>Thời điểm</th>
-				  <th>Hình ảnh</th>
+                  <th>Code</th>
+                  <th> Description</th>
+				  <th>Time</th>
+				  <th>Image</th>
 				  
-				  <th>Đảm nhận</th>
+				  <th>Undertake</th>
 				  
                 </tr>
               </thead>
@@ -94,8 +94,8 @@
               </tbody>
             </table>
 			<div class="d-flex justify-content-center">
-			<a class="btn btn-primary mr-1" href="index.php?content=danhsachsuco">Trở về</a>
-			<button class="btn btn-success ml-1" name="submit">Xác nhận</button>
+			<a class="btn btn-primary mr-1" href="index.php?content=danhsachsuco">Revert</a>
+			<button class="btn btn-success ml-1" name="submit">Confirm</button>
 			</div>
           </div>
 		  </form>

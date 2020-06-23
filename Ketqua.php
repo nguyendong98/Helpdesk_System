@@ -7,7 +7,7 @@
   }
 	if($_SESSION['role'] != 0 ){
     echo "<script>
-      alert('Bạn không đủ quyền hạn để vào trang này');
+      alert('You do not have sufficient permissions to access this page');
       window.open('index.php?content=home', '_self', 1);
     </script>";
   }
@@ -28,7 +28,7 @@
     <div class="table-agile-info">
       <div class="panel panel-default">
         <div class="panel-heading">
-          Theo dõi tiến độ hoàn thành sự cố
+         Track progress of completing incidents
         </div>
 
         <div class="table-responsive">
@@ -36,13 +36,12 @@
             <thead>
               <tr>
                 <th>#</th>
-                
-                <th>KTV được phân công</th>
-                <th>Thời điểm ghi nhận</th>
-                <th>Phần cứng</th>
-                <th>Mô tả</th>
-                <th>Hình ảnh</th>
-                <th>Trạng thái</th>
+                <th>KTV assigned</th>
+                <th>Time of recognition</th>
+                <th>Hardware</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Status</th>
                
               </tr>
             </thead>

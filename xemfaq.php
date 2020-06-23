@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Danh sách FAQ</title>
+		<title>List of FAQ</title>
 		<link rel="stylesheet" href="css/style.css">
 		<style>
 			
@@ -49,16 +49,16 @@
 	<body>
 		<div id ="container">
 		<div id="Header" style="text-align: center; background: #ddede0; padding: 16px;">
-        	<div style="font-size: 20px; font-weight: bold">XEM DANH SÁCH FAQ</div>
+        	<div style="font-size: 20px; font-weight: bold">LIST OF FAQ</div>
         </div>
 		<div id="newfaq">
 			<form id= "frmfaq" name ="frmfaq" method = "post" action="" enctype="multipart/form-data">
 				<table class="table table-striped w-100">
 					<tr class="text-align-center">
-						<th> Tên sự số </th>
-						<th> Hình ảnh </th>
-						<th> Chi tiết </th>
-						<th> Cách khắc phục </th>
+						<th> Trouble name </th>
+						<th> Image </th>
+						<th> Detail </th>
+						<th> How to fix </th>
 					</tr>
 					<?php
 						$item_per_page = !empty($_GET['per_page'])?$_GET['per_page']:2; //số item trên 1 trang
@@ -86,7 +86,7 @@
 							else {
 								echo "<script> 
 									
-									alert('Lỗi truy xuất csdl!');
+									alert('Error sql!');
 										
 								</script>";
 								

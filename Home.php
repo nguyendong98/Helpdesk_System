@@ -7,8 +7,8 @@
         <div class='container d-flex justify-content-center align-items-center'>
             <img src='img/undraw_faq_rjoy.svg' alt="registerImages" class="register__images">
             <div class='register-content'>
-                Chào mừng bạn đến với HELPDESk SYSTEM  <br>
-                <a href="index.php?content=baocaosuco" class="btn btn-danger py-2 mt-5">Báo sự cố ngay</a>
+                Welcome to Helpdesk System   <br>
+                <a href="index.php?content=baocaosuco" class="btn btn-danger py-2 mt-5">Report the trouble now</a>
 
             </div>
         </div>
