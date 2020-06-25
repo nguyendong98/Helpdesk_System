@@ -172,25 +172,25 @@ ul li{ list-style: none;}
     left: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 250px auto;
     grid-template-areas: "nav-left content";
     width: 100%;
 }
 .main.active{
-    grid-template-columns: 250px auto;
+    grid-template-columns: 100px auto;
 }
 .main.active .full-nav{
-    width: 250px;
-}
-.main span{
-    display: none;
+    width: 100px;
 }
 .main.active span{
-    display: block;
+    display: none;
 }
+/*.main.active span{*/
+/*    display: block;*/
+/*}*/
 .full-nav{
     grid-area: nav-left;
-    width: 100px;
+    width: 250px;
     position: fixed;
     top: 90px;
     left: 0;
